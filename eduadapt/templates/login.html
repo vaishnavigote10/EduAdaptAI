@@ -1,0 +1,28 @@
+{% extends "base.html" %}{% load static %}
+{% block title %}Sign in · EduAdapt AI{% endblock %}
+{% block body %}
+<div class="auth">
+  <section class="auth-art">
+    <div class="brand"><svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><circle cx="16" cy="16" r="14" fill="none" stroke="#7FE0B0" stroke-width="2"/><path d="M8 20l5-8 4 5 3-4 4 7" fill="none" stroke="#F2B84B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>EduAdapt</span></div>
+    <h1>A tutor that has read your course and knows what you don't.</h1>
+    <p class="sub">Add your PDFs, slides, Word files and lecture transcripts. Ask questions and get answers with the page, slide or timestamp they came from, then practise on the topics you're weakest in.</p>
+    <div class="builders">{% for m in team %}<span class="bchip"><i>{{ m.initial }}</i>{{ m.name }}</span>{% endfor %}<small>Built by {{ team_names }}</small></div>
+    <svg class="art" viewBox="0 0 520 220" aria-hidden="true"><g stroke="rgba(237,239,230,.25)" stroke-width="2" stroke-dasharray="5 6" fill="none"><path d="M70 120L190 60L330 130L450 70"/><path d="M190 60L250 170"/></g>
+      <g><circle cx="70" cy="120" r="30" fill="#0b1713" stroke="#7fe0b0" stroke-width="3"/><circle cx="190" cy="60" r="38" fill="#0b1713" stroke="#7fe0b0" stroke-width="3"/><circle cx="330" cy="130" r="34" fill="#0b1713" stroke="#f2b84b" stroke-width="3"/><circle cx="450" cy="70" r="28" fill="#0b1713" stroke="#ff7a66" stroke-width="3"/><circle cx="250" cy="170" r="22" fill="#0b1713" stroke="#8fc7ff" stroke-width="3"/></g></svg>
+  </section>
+  <section class="auth-card panel">
+    <div class="tabs" role="tablist"><button class="on" data-tab="in" role="tab">Sign in</button><button data-tab="up" role="tab">Create account</button></div>
+    <form id="authForm" novalidate>
+      <label id="nameRow" hidden>Your name<input id="aName" autocomplete="name" placeholder="e.g. Aarav Sharma"></label>
+      <label>Email<input id="aEmail" type="email" autocomplete="email" placeholder="you@example.com" required></label>
+      <label>Password<input id="aPass" type="password" autocomplete="current-password" placeholder="At least 6 characters" required></label>
+      <p class="err" id="err" role="alert"></p>
+      <button class="btn" id="go" style="width:100%;justify-content:center">Sign in</button>
+    </form>
+    <div class="or"><span>or</span></div>
+    <button class="btn alt" id="demoBtn" style="width:100%;justify-content:center">Continue as Demo Student</button>
+    <p class="sub" style="font-size:13px;margin-top:14px;text-align:center">The demo account is shared and has no courses until you create one.</p>
+  </section>
+</div>
+<script src="{% static 'js/login.js' %}"></script>
+{% endblock %}

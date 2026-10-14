@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>{% block title %}EduAdapt AI{% endblock %}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+{% load static %}<link rel="stylesheet" href="{% static 'css/app.css' %}">
+</head>
+<body>
+<div id="splash" aria-hidden="true"><div class="sp-inner">
+  <svg viewBox="0 0 120 120" class="sp-logo"><circle class="c" cx="60" cy="60" r="52"/><path class="p" d="M30 76 L50 46 L66 66 L78 52 L94 78"/><circle class="d" cx="50" cy="46" r="4"/><circle class="d" cx="78" cy="52" r="4"/></svg>
+  <div class="sp-word">EduAdapt AI</div>
+  <div class="sp-tag">{% block splash_tag %}Learn from your own material.{% endblock %}</div>
+  <div class="sp-bar"><i></i></div>
+</div></div>
+{% block body %}{% endblock %}
+<script>(function(){var s=document.getElementById('splash');if(!s)return;try{if(sessionStorage.getItem('splash')){s.remove();return}sessionStorage.setItem('splash','1')}catch(e){}
+setTimeout(function(){s.classList.add('out');setTimeout(function(){s.remove()},700)},2400)})();</script>
+</body>
+</html>

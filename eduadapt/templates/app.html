@@ -1,0 +1,34 @@
+{% extends "base.html" %}{% load static %}
+{% block splash_tag %}Welcome back, {{ name }}.{% endblock %}
+{% block body %}
+<div class="shell">
+  <aside class="rail">
+    <div class="brand"><svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true"><circle cx="16" cy="16" r="14" fill="none" stroke="#7FE0B0" stroke-width="2"/><path d="M8 20l5-8 4 5 3-4 4 7" fill="none" stroke="#F2B84B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span>EduAdapt</span></div>
+    <div class="course"><label for="courseSel">Course</label><select id="courseSel" aria-label="Choose course"></select>
+      <div class="crow"><button class="ghost" id="newCourse">+ New course</button><button class="ghost" id="delCourse" title="Delete this course">Delete</button></div></div>
+    <nav id="nav">
+      <button data-view="dashboard" class="on"><i>◐</i>Dashboard</button>
+      <button data-view="tutor"><i>✎</i>AI Tutor</button>
+      <button data-view="quiz"><i>◇</i>Practice</button>
+      <button data-view="library"><i>▤</i>Library</button>
+      <button data-view="studio"><i>✦</i>Study Studio</button>
+      <button data-view="team"><i>☺</i>Team</button>
+    </nav>
+    <div class="rail-foot">
+      <div class="credit">Built by {{ team_names }}</div>
+      <div class="me"><div class="av">{{ initial }}</div><div><b>{{ name }}</b><small>{{ email }}</small></div></div>
+      <div class="llm {% if llm %}live{% endif %}"><b></b>{% if llm %}LLM connected{% else %}Offline grounded mode{% endif %}</div>
+      <button class="ghost" id="resetBtn">Reset my progress</button>
+      <button class="ghost" id="logoutBtn">Sign out</button>
+    </div>
+  </aside>
+  <main id="stage"></main>
+</div>
+<dialog id="dlg"><form method="dialog" id="courseForm"><h2>What do you want to learn?</h2>
+  <p class="sub" style="margin:6px 0 18px">Name the course or subject. You'll add your own PDFs, slides, Word files, transcripts or notes next, and everything is built from them.</p>
+  <label>Course or subject<input id="cName" required maxlength="120" placeholder="e.g. Data Structures, Organic Chemistry, UPSC History"></label>
+  <div class="drow"><button type="button" class="btn alt" id="cCancel">Cancel</button><button class="btn" id="cOk">Create and add material</button></div></form></dialog>
+{{ team|json_script:"team-data" }}
+<div id="toast" role="status"></div>
+<script src="{% static 'js/app.js' %}"></script>
+{% endblock %}

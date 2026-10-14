@@ -1,0 +1,4 @@
+[00:05] Welcome back. Today we cover decision trees, which split data using a sequence of yes or no questions about the features.
+[00:40] Each split is chosen to reduce impurity, measured by Gini impurity or entropy, so the groups after the split are as pure as possible.
+[01:20] A very deep decision tree will overfit the training data, so we limit tree depth or prune branches to improve generalization.
+[02:10] Random forests average many decision trees trained on random subsets of the data, which reduces variance and overfitting.
