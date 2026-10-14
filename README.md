@@ -66,10 +66,14 @@ Delete `db.sqlite3` (the data model changed to add accounts and course owners), 
 
 Free web services sleep after 15 minutes idle and take about a minute to wake. Free Postgres expires 30 days after creation, so upgrade the database or export your data before then.
 
-## Contributors
+## Team & Contributions
 
-- Vaishnavi
-- Zainab
-- Mrunal
+| Name | GitHub | Contribution |
+|------|--------|--------------|
+| Zainab Shaikh | [@itsZainab-AI](https://github.com/itsZainab-AI) | Complete frontend, backend, UI design, and deployment |
+| Vaishnavi | [@vaishnavigote10](https://github.com/vaishnavigote10) | Repo setup and team member |
+| Mrunal | [@mrunalbhosale26](https://github.com/mrunalbhosale26) | Team member |
+
+Note: Zainab developed the project on Vaishnavi's machine, so the initial commit was pushed from Vaishnavi's account.
 
 To change names or roles shown in the app, edit `TEAM` at the bottom of `eduadapt/settings.py`.
