@@ -9,7 +9,7 @@ A source-grounded AI tutor with adaptive practice and a learner model. Upload co
 **Windows:** double-click `run.bat`, or run it in a terminal.
 **Mac/Linux:** `./run.sh`
 
-Then open http://127.0.0.1:8000. Register, sign in, or use **Continue as Demo Student**. After signing in, name the course you want to learn and add your own material. Create your own course (or pick one you made earlier), then add your files in the Library. A sample machine-learning course is available as an optional button. `sample_materials/lecture_transcript.txt` is a small file to test with.
+Then open https://eduadaptai.onrender.com. Register, sign in, or use **Continue as Demo Student**. After signing in, name the course you want to learn and add your own material. Create your own course (or pick one you made earlier), then add your files in the Library. A sample machine-learning course is available as an optional button. `sample_materials/lecture_transcript.txt` is a small file to test with.
 
 Manual steps: `pip install -r requirements.txt`, then `python manage.py makemigrations core`, `python manage.py migrate`, `python manage.py runserver`.
 
