@@ -74,6 +74,10 @@ Free web services sleep after 15 minutes idle and take about a minute to wake. F
 | Vaishnavi | [@vaishnavigote10](https://github.com/vaishnavigote10) | Repo setup and team member |
 | Mrunal | [@mrunalbhosale26](https://github.com/mrunalbhosale26) | Team member |
 
+## Built With
+
+Django, Python, and Claude Code (AI-assisted development).
+
 Note: Zainab developed the project on Vaishnavi's machine, so the initial commit was pushed from Vaishnavi's account.
 
 To change names or roles shown in the app, edit `TEAM` at the bottom of `eduadapt/settings.py`.
