@@ -5,3 +5,9 @@ media/
 .env
 venv/
 staticfiles/
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+.env
+db.sqlite3
